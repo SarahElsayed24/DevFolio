@@ -1,0 +1,309 @@
+/* global */
+:root{
+    scroll-padding-top: 78px;
+}
+
+body{
+scroll-behavior: smooth;
+
+}
+
+/* navbaaaar */
+body:has(#home:target) .home::after ,
+body:not(:has(:target)) .home::after ,
+body:has(#about:target) .about::after ,
+body:has(#services:target) .services::after ,
+body:has(#blog:target) .blog::after ,
+body:has(#work:target) .work::after,
+body:has(#contact:target) .contact::after{
+    width: 70%;
+}
+nav .nav-item {
+    padding: 0 15px;
+}
+nav .nav-item a.nav-link {
+    color: #fff;
+    position: relative;
+}
+nav .nav-item a.nav-link::after{
+    content: "";
+    height: 2px;
+    width: 0;
+    left:10%;
+    top:100%;
+    position: absolute;
+    background-color: white;
+    transition: all 0.5s;
+}
+nav .nav-item a.nav-link:hover::after{
+    width: 70%;
+    color: white;
+}
+
+
+/* HERO SECTION */
+
+.bg-image{
+    background-image:linear-gradient(#0009,#0009) ,url("../imgs/hero-bg.jpg");
+    background-position:center;
+    background-size: cover;
+    height: 100vh;
+}
+#home h1{
+    font-size: 4.5rem;
+}
+#home p{
+    font-size: 2rem;
+}
+#home p::after{
+    content:"|";
+    animation-name: typing;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+@keyframes typing {
+    0%{content:"D |"}
+    2%{content:"De |"}
+    4%{content:"Dev |"}
+    6%{content:"Dev |"}
+    8%{content:"Deve |"}
+    10%{content:"Devel |"}
+    12%{content:"Develo |"}
+    14%{content:"Develop |"}
+    16%{content:"Develope |"}
+    18%{content:"Developer |"}
+    20%{content:"Develope |"}
+    22%{content:"Develop |"}
+    24%{content:"Develo |"}
+    26%{content:"Devel |"}
+    28%{content:"Deve |"}
+    30%{content:"Dev |"}
+    32%{content:"De |"}
+    34%{content:"D |"}
+    36%{content:"De |"}
+    38%{content:"Des |"}
+    40%{content:"Desi |"}
+    42%{content:"Desin |"}
+    44%{content:"Desig |"}
+    46%{content:"Design |"}
+    48%{content:"Designe |"}
+    50%{content:"Designer |"}
+    52%{content:"Designe |"}
+    54%{content:"Design |"}
+    56%{content:"Desig |"}
+    58%{content:"Desi |"}
+    60%{content:"Des |"}
+    62%{content:"De |"}
+    64%{content:"D |"}
+    66%{content:"P |"}
+    68%{content:"Ph |"}
+    70%{content:"pho |"}
+    72%{content:"phot |"}
+    74%{content:"photo |"}
+    76%{content:"photog |"}
+    78%{content:"photogr |"}
+    80%{content:"photograp |"}
+    82%{content:"photograph |"}
+    84%{content:"photographe |"}
+    86%{content:"photographer |"}
+    88%{content:"photographe |"}
+    90%{content:"photograph |"}
+    92%{content:"photograp |"}
+    94%{content:"photogra |"}
+    96%{content:"photogr |"}
+    98%{content:"photog |"}
+    100%{content:"photo |"}
+}
+
+
+ /* about--------section */
+.about-img img{
+    /* height: 8rem; */
+}
+.progress-bar{
+    height: 0.7rem;
+}
+.first{
+    width: 85%;
+}
+.last{
+    width: 90%;
+}
+.title-left{
+    position: relative;
+}
+.title-left::before{
+content: "";
+position: absolute;
+height: 3px;
+top:102%;
+width: 100px;
+background-color: blue;
+}
+/* SERVICES SECTION */
+.service-box{
+    /* box-shadow: 0 13px 8px -10px rgba(0,0,0,.1); */
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;  
+}
+#services .service-box:hover .icon{
+    border:#80b4f0 solid 10px !important;
+    background-color: #0075f2 !important; 
+}
+#services .service-box .icon i{
+    transition: all 0.5s;
+}
+#services .service-box:hover .icon i{
+ color: white !important;
+}
+.service-box .icon{
+width: 100px;
+height: 100px;
+border:#0078ff solid 10px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+transition: all 0.5s;
+
+}
+.service-box i{
+    font-size: 30px;
+}
+.service-box p{
+    line-height: 25px;
+}
+.header p::after{
+    content: "";
+    height: 5px;
+    width: 5%;
+    position: absolute;
+    background-color: rgb(0, 119, 255);
+    left:50%;
+    bottom:0;
+    transform: translateX(-50%);
+}
+/* COUNTER-----------SECTION */
+
+.counter-bg{
+    background-image: linear-gradient(rgba(0,120,255,0.7),rgba(0,120,255,0.7)) ,url("../imgs/counters-bg.jpg");
+    background-position: center;
+    background-size: cover;
+    height: ;
+    background-attachment: fixed;
+}
+.counter-box .circle{
+    width: 80px;
+    height: 80px;
+    border:#95afcb solid 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    }
+    /* PORTOFLIO---------SECTION */
+     
+  .portfolio .card .card-body .text span{
+    color: #0078ff;
+  }
+  .portfolio .icon{
+    width: 40px;
+    height: 40px;
+    border: #0078ff solid 3px;
+  }
+  /* .portfolio .card{
+    overflow: hidden;
+  } */
+  .portfolio .card figure{
+    overflow: hidden;
+  }
+  .portfolio .card figure img{
+    transition: all 1s;
+  }
+  .portfolio .card:hover  figure img{
+   transform: scale(1.2) !important;
+  }
+
+  /* carousel--------------section */
+/* shared */
+.carousel, #contact{
+background-image: linear-gradient(rgba(0,120,255,0.7),rgba(0,120,255,0.7)) , url("../imgs/overlay-bg.jpg");
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+}
+.carousel-indicators [data-bs-target] {
+    border-radius: 50%;
+    width: 0.7rem;
+    height: 0.7rem;
+}
+
+/* BLOG------------------SECTION */
+#blog .avatar{
+    width: 32px;
+    height: 32px;
+}
+#blog .box{
+    background-color: #0078ff;
+    bottom: -5%;
+}
+
+/* CONTACT===========SECTION */
+#contact form .button button{
+    background-color: #0078ff;
+}
+#contact .contact-header h2::after{
+    content: "";
+    background-color:#0078ff;
+    width: 20% ;
+    height: 2px;
+    position: absolute;
+    top:55%;
+    left:0;
+}
+#contact .contact-social i{
+    color: #0075f2;
+}
+#contact .social-circle .circle a{
+    color: black;
+    padding: 20px;
+}
+#contact .social-circle .circle a i{
+    padding: 0 0 15px 0;
+    transition: all 0.7s;
+}
+#contact .social-circle .circle{
+    width: 40px;
+    height:40px;
+    border: #0078ff solid 3px;
+    padding: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.7s;
+}
+#contact .social-circle .circle:hover {
+    border: #7bb5f8 solid 3px !important;
+    background-color: #0075f2;   
+}
+#contact .social-circle .circle:hover i{
+    color: white !important; 
+}
+
+/* FOOTER==============SECTION */
+footer{
+    background-color:#0075f2;
+}
+footer .arrow{
+    border-radius: 50%;
+    background-color:#1a67c0;
+    width: 50px;
+    height: 50px;
+}
